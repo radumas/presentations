@@ -42,13 +42,13 @@
 			<div class="slides">
 				<section data-markdown>
 					<script type="text/template">
-                        #OpenTripPlanner  
+                        # OpenTripPlanner  
                         <br />  
                         Open-source tools to analyze mobility scenarios for Ilha do Fundão  
                         <br />
-                        #####2015-07-08  
+                        ##### 2015-07-08  
                         <br />
-                        ###Created by [Raphael Dumas](https://twitter.com/DumasRaphael)
+                        ### Created by [Raphael Dumas](https://twitter.com/DumasRaphael)
                         <br />
                         Follow along at [radumas.github.io/coppe-ltc/presentations/20150708/](https://radumas.github.io/coppe-ltc/presentations/20150708/)
                     </script>
@@ -56,7 +56,7 @@
                 
                 <section id="aboutme" data-markdown>
 					<script type="text/template">
-                        ##About Raphael
+                        ## About Raphael
                         <br />
                         * Canadian
                         * B. Eng Civil <t><t> _McGill 2012_
@@ -71,7 +71,7 @@
                 
                 <section id="outline" data-markdown>
 					<script type="text/template">
-                        ##Outline  
+                        ## Outline  
                         <br />
                         * [OpenTripPlanner](#otp)
                         * [Examples](#examples)
@@ -83,7 +83,7 @@
                 <section id="otp"> 
                     <section id="otp_description" data-markdown>
                             <script type="text/template">
-                                ##Open Trip Planner  
+                                ## Open Trip Planner  
                                 <br />
                                 [Open Trip Planner](http://www.opentripplanner.org/) is an open-source routing and analysis tool designed to use open 
                                 data (GTFS, OpenStreetMap, Census) initially developed in 2009 for Portland, Oregon. It is now funded by the [Software 
@@ -94,7 +94,7 @@
                     
                     <section id="otp_instance" data-markdown>
                             <script type="text/template">
-                                ##Open Trip Planner: Basic Implementation for Boston
+                                ## Open Trip Planner: Basic Implementation for Boston
                                 ![Instance Screenshot](img/otp_screenshot.png)
                                 [link](http://107.170.35.214:8080/)
                             </script>
@@ -102,7 +102,7 @@
             
                     <section id="otp_analyst_server" data-markdown>
                             <script type="text/template">
-                                ###Open Trip Planner Analyst Server
+                                ### Open Trip Planner Analyst Server
                                 [link](https://github.com/conveyal/analyst-server/)
                                 ![Analyst Splash](img/analyst_splash.png)
                                 [My instance](http://107.170.35.214:9000/tutorial)
@@ -111,7 +111,7 @@
                     
                     <section id="otp_analyst_server2" data-markdown>
                             <script type="text/template">
-                                ###Open Trip Planner Analyst Server  
+                                ### Open Trip Planner Analyst Server  
                                 <br />
                                 Analyst Server builds on OTP's routing algorithm to perform all-to-all travel time estimates in order to calculate
                                 accessibility (the number of "opportunities" available within a specified travel time). The web interface allows 
@@ -124,7 +124,7 @@
                 <section id="examples">
                     <section data-markdown>
 					   <script type="text/template">
-                            ##Examples  
+                            ## Examples  
                             <br />
                             
                         </script>
@@ -132,7 +132,7 @@
                     
                     <section data-markdown>
 					   <script type="text/template">
-                            ##Examples  
+                            ## Examples  
                             <br />
                             <br />
                             [Marseille](http://62.210.125.178/marseille/)
@@ -141,7 +141,7 @@
                     
                     <section data-markdown>
 					   <script type="text/template">
-                            ##Examples  
+                            ## Examples  
                             <br />
                             <br />
                             [New York's Regional Plan Association](http://fragile-success.rpa.org/maps/jobs.html)
@@ -153,7 +153,7 @@
                 <section id="possibleanalyses">
                     <section data-markdown>
                         <script type="text/template">
-                        ##Possible Analyses  
+                        ## Possible Analyses  
                         <br />  
                         1. Travel Time Comparisons
                         2. Public Facing Scenario Simulation
@@ -163,7 +163,7 @@
                     
                     <section data-markdown>
 					   <script type="text/template">
-                            ###1. Travel Time Comparisons
+                            ### 1. Travel Time Comparisons
                             <br />
                             1. For every OD pair, calculate public transit travel time using current travel time.
                             2. For each proposed scenario, recalculate travel times.  
@@ -176,7 +176,7 @@
                     
                     <section data-markdown>
                         <script type="text/template">
-                            ###2. Presenting Scenarios to the Public
+                            ### 2. Presenting Scenarios to the Public
                             <br />
                             Create new GTFS schedules for different proposed public transit projects, and serve these on a public-facing website so 
                             that commuters can see how their commutes might be improved.  
@@ -186,7 +186,7 @@
                     
                     <section data-markdown>
                         <script type="text/template">
-                            ###3. Accessibility analysis  
+                            ### 3. Accessibility analysis  
                             <br />
                                * How many students/employees can access the Ilha in x mins?
                                * How many potential students/employees can...?
@@ -198,7 +198,7 @@
                 <section id="datareqs">
                     <section data-markdown>
 					   <script type="text/template">
-                            ##Data Requirements  
+                            ## Data Requirements  
                             <br />
                             1. GTFS Schedules for Bus, Metro and Boat
                             2. Street Network (can get from OSM)
@@ -211,7 +211,7 @@
                     
                     <section data-markdown>
 					   <script type="text/template">
-                            ##3. Demographic Data by Geography for Rio (.shp file)
+                            ## 3. Demographic Data by Geography for Rio (.shp file)
                               * Aggregate Employee/student locations
                               * \#Residents by education level(high school, university, masters, etc.)
                               * \#Residents by income
@@ -224,7 +224,7 @@
                 </section>
                 <section id="techreqs" data-markdown>
 					<script type="text/template">
-                        ##Computing Requirements  
+                        ## Computing Requirements  
                         <br />
                         OTP & OTPA are currently running on a Digital Ocean server with `Ubuntu 14.04` and 2 Cores, 2GB RAM, and 30GB SSD.  
                         ($20/month)  
@@ -235,7 +235,7 @@
                 
                 <section id="limitations" data-markdown>
 					<script type="text/template">
-                        ##Limitations  
+                        ## Limitations  
                         <br />  
                         * Driving directions don't take traffic into account (but could)
                         * Examples above required substantial coding on top of the basic platform
@@ -244,8 +244,8 @@
                 
                 <section id="questions" data-markdown>
 					<script type="text/template">
-                    #Perguntas  
-                    #?
+                    # Perguntas  
+                    # ?
                     </script>
                 </section>
 				

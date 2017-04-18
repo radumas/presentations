@@ -46,16 +46,16 @@
                         <br />  
                         Crowdsourcing Better Biking Infrastructure with a Webmap
                         <br />
-                        #####2016-07-09  
+                        ##### 2016-07-09  
                         <br />
-                        ###Created by [Raphael Dumas](http://radumas.info)
+                        ### Created by [Raphael Dumas](http://radumas.info)
                         Follow along at [http://bit.ly/mapscampbikeways](https://radumas.github.io/blog/presentations/20160709/)  
                     </script>
 				</section>
                 
                 <section id="aboutme" data-markdown>
 					<script type="text/template">
-                        ##About Raphael
+                        ## About Raphael
                         <br />
                         
                         * B. Eng Civil <t><t> _McGill 2012_  
@@ -70,7 +70,7 @@
                 
                 <section id="aboutbcu" data-markdown>
 					<script type="text/template">
-                        ##Boston Cyclists Union 
+                        ## Boston Cyclists Union 
                         <br />
                         
                         * Local advocacy organization fighting for better bicycling infrastructure for all  
@@ -92,8 +92,8 @@
                 
                 <section data-state="centerText" data-markdown>
                     <script type="text/template">
-                    ###But easy wins have been won. 
-                    ###Need a compelling vision to justify future projects.
+                    ### But easy wins have been won. 
+                    ### Need a compelling vision to justify future projects.
                     </script>
                 </section>
                     
@@ -105,7 +105,7 @@
 
                 <section data-markdown>
                     <script type="text/template">
-                    ###Could I build a digital map?
+                    ### Could I build a digital map?
                     <br>
                      - That users could draw in routes and mark dangerous points  
                      <br>
@@ -118,20 +118,20 @@
                 <section id="inspiration">
                     <section data-markdown>
                         <script data-state="centerText" type="text/template">
-                        #Inspiring projects
+                        # Inspiring projects
                         </script>
                     </section>
                     
                     <section data-markdown>
                         <script type="text/template">
-                        ###[Mike Foster's CrowdMapping Tutorial](http://duspviz.mit.edu/web-map-workshop/cartodb-data-collection/)
+                        ### [Mike Foster's CrowdMapping Tutorial](http://duspviz.mit.edu/web-map-workshop/cartodb-data-collection/)
                         <iframe width="1366" height="540" src="http://duspviz.mit.edu/web-map-workshop/cartodb-data-collection/">%nbsp; </iframe>
                         </script>
                     </section>
                     
                     <section data-markdown>
                         <script type="text/template">
-                        ###[Sarah Bindman's Veloroutes](https://github.com/sbindman/Veloroute)
+                        ### [Sarah Bindman's Veloroutes](https://github.com/sbindman/Veloroute)
                         <iframe width="1366" height="540" src="http://veloroute.herokuapp.com/">%nbsp; </iframe>
                         </script>
                     </section>
@@ -141,13 +141,13 @@
                 <section id="workflow">
                     <section data-state="centerText"  data-markdown>
                         <script type="text/template">
-                        #Workflow
+                        # Workflow
                         </script>
                     </section>
                     
                     <section data-markdown>
                         <script type="text/template">
-                        ###Discovered the CartoDB SQL API
+                        ### Discovered the CartoDB SQL API
                         <pre><code class="sql">CREATE OR REPLACE FUNCTION insert_bikeways_data (
                             _geojson TEXT,
                             _notes TEXT,
@@ -175,7 +175,7 @@
                     
                     <section data-markdown>
                         <script type="text/template">
-                        ###Created a basic leaflet-draw to CartoDB map
+                        ### Created a basic leaflet-draw to CartoDB map
                         
                          <iframe width="1366" height="540" src="http://radumas.info/crowdmap-basic">%nbsp; </iframe>
                         </script>
@@ -183,7 +183,7 @@
                     
                     <section data-markdown>
                         <script type="text/template">
-                        ###Then added Mapbox Directions to Enable Route-Drawing
+                        ### Then added Mapbox Directions to Enable Route-Drawing
                         
                         <iframe width="1366" height="540" src="http://radumas.info/bikeways4everybody">%nbsp; </iframe>
 
@@ -195,13 +195,13 @@
                 <section id="data-processing">
                     <section data-markdown>
                         <script type="text/template">
-                        #Data Processing and Results
+                        # Data Processing and Results
                         </script>
                     </section>
                     
                     <section data-markdown>
                         <script type="text/template">
-                        ###Points  
+                        ### Points  
                         <br/>
                         <br/>
                         - Grouped using hierarchical spatial clustering in PostGIS  
@@ -213,7 +213,7 @@
                     
                     <section data-markdown>
                         <script type="text/template">
-                        ###Lines  
+                        ### Lines  
                         <br/>
                         <br/>
                          - Custom PostGIS algorithm to split lines by overlap  
@@ -226,7 +226,7 @@
                     
                     <section data-markdown>
                         <script type="text/template">
-                        ###Automating Processing with Heroku
+                        ### Automating Processing with Heroku
                         
                         <iframe width="1366" height="540" src="http://www.radumas.info/blog/bcu/tutorial/2016/06/15/Heroku-update-cartodb-table.html ">%nbsp; </iframe>
                         </script>
@@ -234,7 +234,7 @@
                     
                     <section data-markdown>
                         <script type="text/template">
-                        ###Results
+                        ### Results
                          
                         <iframe width="1366" height="540" src="https://bcu.carto.com/viz/4aa385ec-f83d-11e5-9dc1-0e3ff518bd15/embed_map">%nbsp; </iframe>
                         </script>
@@ -244,7 +244,7 @@
                     
                 <section data-markdown>
                     <script type="text/template">
-                    ###The Future
+                    ### The Future
                     <br>
                      - Refactor route-drawing javascript and make it a leaflet plugin  
                      <br>
@@ -258,9 +258,9 @@
                 
                 <section data-markdown>
                     <script data-state="centerText" type="text/template">
-                    ##Thanks
+                    ## Thanks
                     <br>
-                    ###[radumas.info](http://radumas.info)
+                    ### [radumas.info](http://radumas.info)
                     </script>
                 </section>
                 
