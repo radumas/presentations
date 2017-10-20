@@ -46,9 +46,7 @@
                         <br />  
                         Using Inferred Transit Journeys to Compare Black-White Travel Times
                         <br />
-                        ##### 2017-10-20  
-                        <br />
-                        ### Created by [Raphael Dumas](http://radumas.info)
+                        Created by [Raphael Dumas](http://radumas.info)
                         <br />
                         Follow along after [radumas.info/presentations/20171020/](https://radumas.github.io/blog/presentations/20171020/)  
                         Or check out my thesis at [radumas.info/thesis/](https://radumas.github.io/thesis/)
@@ -73,6 +71,7 @@
                         <br />
                         * [ODX](#odx)
                         * [History of Transit Equity Analysis in USA](#equity)
+                        * [FTA Reporting Requirements](#fta_analysis)
                         * [Analyzing Inferred Journeys](#analysis)
                     </script>
                 </section>
@@ -86,8 +85,8 @@
 
                     <section data-markdown>
                         <script type="text/template">
-                        ##Automatically Collected Data Systems
-                        
+                        ## Automatically Collected Data Systems
+                        <br />
                         - Transit agencies are overwhelmed by data collected from turnkey systems. And they have minimal analytical capacity to transform it into useful information
                         - Moreover, data is stored in individual departments, with minimal motivation to break down silos and combine disparate datastreams
                         - But there is a glimmer of hope, inspired by "business analytics" and "Big Data" movements, data "warehouses" are appearing on the horizon
@@ -96,6 +95,8 @@
                     
                     <section data-markdown>
                         <script type="text/template">
+                        ## ODX
+                        <br />
                         - Originally by Jay Gordon for Transport for London
                         - Inferred Origins and Destinations on Bus
                         - Linked bus and rail stages into journeys
@@ -271,13 +272,21 @@
                          - However the right for advocates to pursue legal remedy for these outcomes has been removed
                         </script>
                     </section>
-                    
+                </section>
+
+                <section id="fta_analysis">
+                    <section data-markdown>
+                            <script type="text/template">
+                            ### FTA Required Analysis  
+                            
+                            Agencies operating 50+ fixed-route vehicles serving over 200,000 pop
+                            </script>
+                        </section>
+                        
+
+
                     <section data-markdown>
                         <script type="text/template">
-                        ### FTA Required Analysis  
-                        
-                        <small>Agencies operating 50+ fixed-route vehicles serving over 200,000 pop</small>
-                        
                         |Analysis Required|Frequency|
                         |----------------------------|
                         |Disparate impacts & disproportionate burden|Fare increase or major service change |
@@ -308,6 +317,7 @@
                         
                          - Passenger should be unit of analysis 
                          - Use of average proportions hides distributions (Bills, 2013)
+
                          ![](img/20171020/avgs_hide.png)
                          ![](img/20171020/distro_better.png)
                         </script>
@@ -352,9 +362,9 @@
                         <script type="text/template">
                         ### Black commuters face longer trips to work  
                         
-                        >Black subway commuters spend an **additional 28 hours annually** getting to work as compared to white subway commuters. The worst differential is experienced by black bus commuters, who spend **nearly 70 more hours** per year than their white counterparts getting to and from work by bus.
-                        Measuring Transportation Equity: Commute Time Penalties by Race and Mode in Greater Boston
-                        *Williams, Pollack, & Billingham*
+                        <blockquote><small>Black subway commuters spend an **additional 28 hours annually** getting to work as compared to white subway commuters. The worst differential is experienced by black bus commuters, who spend **nearly 70 more hours** per year than their white counterparts getting to and from work by bus.
+                        Measuring Transportation Equity: Commute Time Penalties by Race and Mode in Greater Boston</small>
+                        *Williams, Pollack, & Billingham*</blockquote>
                         </script>
                     </section>
                     
@@ -378,7 +388,7 @@
                     
                     <section data-markdown>
                         <script type="text/template">
-                        ## Application of ODX results to Equity Analysis
+                        #### Application of ODX results to Equity Analysis
                         
                          - One month of inferred weekday OD data
                          - 18.3M fares, 1.55M distinct fare cards
@@ -389,7 +399,7 @@
                     
                     <section data-markdown>
                         <script type="text/template">
-                        ## Clustered Origins to Determine Home Region
+                        #### Clustered Origins to Determine Home Region
                         
                         ![](img/20171020/clustered_origins.png)
 
@@ -403,14 +413,14 @@
                          - Used Voronoi Polygons of stops created for each network. 
                          - Then assign originating trips within "home zone" to the intersected tracts
 
-                        ![](img/20171020/clustered_origins.png)
+                        ![](img/20171020/image3.png)
 
                         </script>
                     </section>
 
                     <section data-markdown>
                         <script type="text/template">
-                        ## Boston's Demographic Landscape
+                        ### Boston's Demographic Landscape
 
                         ![](img/20171020/distribution_commuters_bw.png)
 
@@ -419,42 +429,42 @@
 
                     <section data-markdown>
                         <script type="text/template">
-                        ### Avg. Journey Time Sensitivity to Threshold
+                        #### Avg. Journey Time Sensitivity to Threshold
                         <img class="stretch"src="img/20171020/image34.png"></img>
                         </script>
                     </section>
                     
                     <section data-markdown>
                         <script type="text/template">
-                        ### While Trip Distance Doesn't Vary
+                        #### While Trip Distance Doesn't Vary
                         <img class="stretch"src="img/20171020/image35.png"></img>
                         </script>
                     </section>
                     
                     <section data-markdown>
                         <script type="text/template">
-                        ### But Speeds Decrease
+                        #### But Speeds Decrease
                         <img class="stretch" src="img/20171020/image33.png"></img>
                         </script>
                     </section>
                     
                     <section data-markdown>
                         <script type="text/template">
-                        ### Partially Due to Trips Requiring More Transfers
+                        #### Partially Due to Trips Requiring More Transfers
                         <img class="stretch"src="img/20171020/image36.png" ></img>
                         </script>
                     </section>
                     
                     <section data-markdown>
                         <script type="text/template">
-                        ### Tracts Selected Based on Determined Threshold
+                        #### Tracts Selected Based on Determined Threshold
                         <img class="stretch"src="img/20171020/image37.png" ></img>
                         </script>
                     </section>
 
                     <section data-markdown>
                         <script type="text/template">
-                        ### Tracts Selected Based on Determined Threshold
+                        #### Tracts Selected Based on Determined Threshold
                         ![](img/20171020/table_avg_jny_time.png)
                         </script>
                     </section>
@@ -479,7 +489,7 @@
                     
                     <section data-markdown>
                         <script type="text/template">
-                            ## Examined Potential Solutions
+                            ### Examined Potential Solutions
 
                              - Through-running buses at key transfer points
                              - Improve departure regularity to reduce wait times at major terminals
@@ -488,7 +498,7 @@
 
                     <section data-markdown>
                         <script type="text/template">
-                            ## Best Solution: Upgrading Commuter Rail to Subway Frequency
+                            ##### Best Solution: Upgrading Commuter Rail to Subway Frequency
                             ![](img/20171020/fairmount.png)
                         </script>
                     </section>
