@@ -44,10 +44,10 @@
 					<script type="text/template">
                         ### New Methods of Analyzing Transportation Equity with Big Data 
                         <br />  
-                        Using Inferred Transit Journeys to Compare Black-White Travel Times
+                        *Using Inferred Transit Journeys to Compare Black-White Travel Times*
                         <br />
                         Created by [Raphael Dumas](http://radumas.info)
-                        <br />
+                        <br /><br />
                         Follow along after [radumas.info/presentations/20171020/](https://radumas.github.io/blog/presentations/20171020/)  
                         Or check out my thesis at [radumas.info/thesis/](https://radumas.github.io/thesis/)
                     </script>
@@ -85,11 +85,13 @@
 
                     <section data-markdown>
                         <script type="text/template">
-                        ## Automatically Collected Data Systems
+                        #### Automatically Collected Data Systems
                         <br />
-                        - Transit agencies are overwhelmed by data collected from turnkey systems. And they have minimal analytical capacity to transform it into useful information
-                        - Moreover, data is stored in individual departments, with minimal motivation to break down silos and combine disparate datastreams
-                        - But there is a glimmer of hope, inspired by "business analytics" and "Big Data" movements, data "warehouses" are appearing on the horizon
+                        <small><ul>
+                        <li>Transit agencies are overwhelmed by data collected from turnkey systems. And they have minimal analytical capacity to transform it into useful information</li>
+                        <li>Moreover, data is stored in individual departments, with minimal motivation to break down silos and combine disparate datastreams</li>
+                        <li>But there is a glimmer of hope, inspired by "business analytics" and "Big Data" movements, data "warehouses" are appearing on the horizon</li>
+                        </ul></small>
                         </script>
                     </section>            
                     
@@ -276,12 +278,12 @@
 
                 <section id="fta_analysis">
                     <section data-markdown>
-                            <script type="text/template">
-                            ### FTA Required Analysis  
-                            
-                            Agencies operating 50+ fixed-route vehicles serving over 200,000 pop
-                            </script>
-                        </section>
+                        <script type="text/template">
+                        ### FTA Required Analysis  
+                        
+                        Agencies operating 50+ fixed-route vehicles serving over 200,000 pop
+                        </script>
+                    </section>
                         
 
 
@@ -314,9 +316,9 @@
                     <section data-markdown>
                         <script type="text/template">
                         ### Critiques  
-                        
-                         - Passenger should be unit of analysis 
-                         - Use of average proportions hides distributions (Bills, 2013)
+                        <ul><small>
+                        <li>Passenger should be unit of analysis </li>
+                        <li>Use of average proportions hides distributions (Bills, 2013)</li></small></ul>
 
                          ![](img/20171020/avgs_hide.png)
                          ![](img/20171020/distro_better.png)
@@ -388,7 +390,7 @@
                     
                     <section data-markdown>
                         <script type="text/template">
-                        #### Application of ODX results to Equity Analysis
+                        ### Application of ODX results to Equity Analysis
                         
                          - One month of inferred weekday OD data
                          - 18.3M fares, 1.55M distinct fare cards
@@ -401,7 +403,7 @@
                         <script type="text/template">
                         #### Clustered Origins to Determine Home Region
                         
-                        ![](img/20171020/clustered_origins.png)
+                        <img src="img/20171020/clustered_origins.png" width="90%"></img>
 
                         </script>
                     </section>
@@ -409,9 +411,10 @@
                     <section data-markdown>
                         <script type="text/template">
                         #### Intersected Stop Catchment Areas with Census Tracts
-                        
-                         - Used Voronoi Polygons of stops created for each network. 
-                         - Then assign originating trips within "home zone" to the intersected tracts
+                        <small><ul>
+                        <li>Used Voronoi Polygons of stops created for each network </li>
+                        <li>Then assign originating trips within "home zone" to the intersected tracts</li>
+                        </ul></small>
 
                         ![](img/20171020/image3.png)
 
@@ -430,7 +433,7 @@
                     <section data-markdown>
                         <script type="text/template">
                         #### Avg. Journey Time Sensitivity to Threshold
-                        <img src="img/20171020/image34.png" height="540" width="888"></img>
+                        <img src="img/20171020/image34.png" height="717" width="888"></img>
                         </script>
                     </section>
                     
@@ -477,12 +480,6 @@
                     
                     <section data-markdown>
                         <script type="text/template">
-                        <img src="img/20171020/image43.png" height="540" width="878"></img>
-                        </script>
-                    </section>
-                    
-                    <section data-markdown>
-                        <script type="text/template">
                         <img src="img/20171020/image44.png" height="540" width="878"></img>
                         </script>
                     </section>
@@ -513,7 +510,38 @@
                              - Inferred OD can be supplemented with survey data linking farecards (and this would help validate OD inference)
                         </script>
                     </section>
-                    
+
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## 2 Years Later:
+
+                            - [Boston's methodical bus revamp](https://www.citylab.com/transportation/2017/04/inside-bostons-bus-revamp/522726/)
+                            ![](img/20171020/vanderwaart_quote.png) 
+
+
+                        </script>
+                    </section>
+
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## 2 Years Later:
+
+                            Transit Lab Theses:
+                            - [Vanderwaart - Planning transit networks with origin, destination, and interchange inference](https://dspace.mit.edu/handle/1721.1/103820)
+                            - [Southwick - Understanding bus passenger crowding through origin destination inference](https://dspace.mit.edu/handle/1721.1/104323)
+                        </script>
+                    </section>
+
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## 2 Years Later:
+
+                            Terrible metrics still being used:
+                            >More than 40 percent of the MBTA’s bus routes in largely minority communities run a below-average number of buses — compared to just 25 percent on so-called “non-minority” routes [...]
+                            [source](http://www.bostonherald.com/news/local_coverage/2017/09/study_mbta_service_for_minority_bus_routes_subpar)
+                        </script>
+                    </section>
+            
                     <section data-markdown>
                         <script type="text/template">
                             # ?
