@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Open Data for Open Source Transit Performance Monitoring</title>
+
+		<meta name="description" content="Using Open Data to Make Open Source Transit Dashboards">
+		<meta name="author" content="Raphael Dumas">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/night.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section data-markdown>
+					<script type="text/template">
+                        ### Using Open Data to Make Open Source Transit Dashboards 
+                        <br />  
+                        *Citizens evaluating performance for citizens*
+                        <br />
+                        Created by [Raphael Dumas](http://radumas.info)
+                        <br /><br />
+                        Follow along after [radumas.info/presentations/20180106/](https://radumas.github.io/blog/presentations/20180106/)  
+                       
+                    </script>
+				</section>
+
+                <section id="aboutme" data-markdown>
+					<script type="text/template">
+                        ## About Raphael
+                        <br />
+                        * B. Eng Civil <t><t> _McGill 2012_
+                        * M.S. Transportation & M. City Planning <t> _MIT 2015_
+                        * Master's Thesis: _Analyzing Transit Equity Using Automatically Collected Data_
+                        * Research Analyst Toronto Big Data Innovation Team
+                    </script>
+                </section>
+
+                
+                <section id="outline" data-markdown>
+					<script type="text/template">
+                        ## Outline  
+                        <br />
+                        * [What is the problem?](#problem)
+                        * [Our vision at Civic Tech Toronto](#ctto)
+                        * [Discussion how we can collaborate]
+                    </script>
+                </section>
+                
+                <section id="problem">
+                    <section data-markdown>
+                        <script type="text/template">
+                        ## What's the Problem with Transit Performance Monitoring?
+                        </script>
+                    </section>    
+
+                    <section data-markdown>
+                        <script type="text/template">
+                        ### The Problem
+                        <br />
+                        <div style="font-size=12px"><ul>
+                        <li>Transit Agencies are bad at communicating their successes and failures</li>
+                        <li>Users therefore overvalue their most salient experiences: the worst ones</li>
+                        <li>So agencies could improve satisfaction/goodwill through better communication</li>
+                        <li>While generating the political will to solve big problems</li>
+                        </ul></small></div>
+                        </script>
+                    </section>            
+                    
+                </section>
+
+                <section id="ctto">
+                    <section data-markdown>
+                        <script type="text/template">
+                        ## TTC Subway Performance Dashboard Civic Tech Project
+                        </script>
+                    </section>
+                    
+                    <section data-markdown>
+                        <script type="text/template">
+                        ### Use OpenData to Make an OpenSource Dashboard
+                         
+                         - Fully transparent
+                         - Citizen-developed, separate from the agency
+                         - Replicable elsewhere, enabling comparisons between similar cities
+                        </script>
+                    </section>
+                    
+                    <section data-markdown>
+                        <script type="text/template">
+                        ### Civic Tech Toronto
+                        
+                         - Weekly hack nights like Code for America Brigades
+                         - Members come and go, want to learn new data analysis skills. Cater tasks to their interests
+                        </script>
+                    </section>
+                    
+                    <section data-markdown>
+                        <script type="text/template">
+                        ### TTC Performance Dashboard
+
+                        1. Pulling data from an API powering count-down clocks
+                        2. Processing predicted arrivals into GTFS 
+                        3. Develop performance metrics off these
+                        4. Build a useful, responsive, interactive webpage to show current metrics, and trends 
+                        </script>
+                    </section>
+                    
+                    <section data-markdown>
+                        <script type="text/template">
+                        ### Metric: Buffer Time
+                        
+                        _The amount of extra time you have to buffer to ensure your trip is on time 19/20_
+                        Difference between 95% travel time and average.
+                        </script>
+                    </section>
+                    
+                    <section data-markdown>
+                        <script type="text/template">
+                            [Code available here](https://github.com/CivicTechTO/ttc_subway_times)
+                        </script>
+                    </section>
+                        
+                    <section data-markdown>
+                        <script type="text/template">
+                            # ?
+                        </script>
+                    </section>
+
+                    <section data-markdown>
+                        <script type="text/template">
+                        ### Discuss
+                        </script>
+                    </section>
+                    
+                </section>
+                
+            </div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: false,
+                slideNumber: true,
+                previewLinks: true,
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
