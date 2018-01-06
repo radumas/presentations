@@ -48,7 +48,7 @@
                         <br />
                         Created by [Raphael Dumas](http://radumas.info)
                         <br /><br />
-                        Follow along after [radumas.info/presentations/20180106/](https://radumas.github.io/blog/presentations/20180106/)  
+                        Follow along [radumas.info/presentations/20180106/](https://radumas.github.io/blog/presentations/20180106/)  
                        
                     </script>
 				</section>
@@ -71,7 +71,7 @@
                         <br />
                         * [What is the problem?](#problem)
                         * [Our vision at Civic Tech Toronto](#ctto)
-                        * [Discussion how we can collaborate]
+                        * [Discussion how we can collaborate](#discussion)
                     </script>
                 </section>
                 
@@ -122,26 +122,57 @@
                          - Members come and go, want to learn new data analysis skills. Cater tasks to their interests
                         </script>
                     </section>
-                    
+
                     <section data-markdown>
                         <script type="text/template">
-                        ### TTC Performance Dashboard
-
-                        1. Pulling data from an API powering count-down clocks
-                        2. Processing predicted arrivals into GTFS 
-                        3. Develop performance metrics off these
-                        4. Build a useful, responsive, interactive webpage to show current metrics, and trends 
+                        ### Toronto Transit
+                        
+                         - Two separate APIs, NextBus for surface vehicles, secret API for subway countdowns
+                         - Targeted subway because smaller dataset, affecting more people: bigger bang for effort
+                           * data is in a unique format. Processing has been a challenge
                         </script>
                     </section>
                     
+                    <section>
+                        <img src='img/20180106/open_data_analytics.png'></img>
+                    </section>
+                    
+                    <section>
+                        <img src='img/20180106/open_data_analytics_2.png'></img>
+                    </section>
+
                     <section data-markdown>
                         <script type="text/template">
                         ### Metric: Buffer Time
                         
                         _The amount of extra time you have to buffer to ensure your trip is on time 19/20_
+                            
                         Difference between 95% travel time and average.
                         </script>
                     </section>
+                    
+                    <section data-markdown>
+                        <script type="text/template">
+                        ### Metric: Excess Wait Time
+                        
+                        ![](http://www.busstat.nyc/static/img/ewt-exp.JPG)
+                        </script>
+                    </section>
+
+
+                    <section data-markdown>
+                        <script type="text/template">
+                        ### Further analyses
+
+                         - Identify effects of different delay types 
+                         - Improve arrival predictions
+                         - Extend to surface fleet
+                        </script>
+                    </section>
+
+                </section>
+
+                <section>
                     
                     <section data-markdown>
                         <script type="text/template">
@@ -155,12 +186,23 @@
                         </script>
                     </section>
 
-                    <section data-markdown>
+                    <section data-markdown id='discussion'>
                         <script type="text/template">
-                        ### Discuss
+                        ### [Discuss]()
                         </script>
                     </section>
                     
+
+                    <section data-markdown id='discussion'>
+                        <script type="text/template">
+                            ### Further Resources
+
+                             - [busstat.nyc methodology](http://www.busstat.nyc/methodology)
+                             - [Be smarter about delays (TransitCenter)](http://transitcenter.org/2016/05/17/improve-transit-smart-delays/)
+                             - [Memo to MTA Board: You’re Measuring Performance Wrong. Here’s What to Do Instead.](http://transitcenter.org/2016/11/01/memo-to-mta-board-youre-measuring-performance-wrong/)
+                        </script>
+                    </section>
+
                 </section>
                 
             </div>
