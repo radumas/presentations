@@ -1,0 +1,631 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>New Methods of Analyzing Transportation Equity with Big Data</title>
+
+		<meta name="description" content="Using Inferred Transit Journeys to Compare Commute Travel Times between Black and White Populations">
+		<meta name="author" content="Raphael Dumas">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/night.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section data-markdown>
+					<script type="text/template">
+                        ### New Methods of Analyzing Transportation Equity with Big Data 
+
+                        <br />  
+                        *Using Inferred Transit Journeys to Compare Commute Travel Times between Black and White Populations*
+                        <br />
+                        <small>Created by [Raphael Dumas](http://radumas.info)</small>
+                        <br />
+                        <small>Follow along after [radumas.info/presentations/20180213/](https://radumas.github.io/blog/presentations/20180213/)  
+                        Or check out my thesis at [radumas.info/thesis/](https://radumas.github.io/thesis/)</small>
+                    </script>
+				</section>
+                
+
+                <section data-markdown>
+                    <script type="text/template">
+                        ### Research Advisors
+                        <br/>
+                        - Prof. Haris Koutsopoulos
+                        - Dr. David C. Block-Schachter
+                        - John Attanucci
+                        - Fred Salvucci
+                    </script>
+                </section> 
+                    
+
+                <section data-markdown>
+                    <script type="text/template">
+                        ### Huge Thanks
+                        <br/>
+                        - Dr. Gabriel Sanchez-Martinez
+                        - Jay Gordon
+                        ### And the generous funding of
+                        - NSERC
+                        - MBTA
+                    </script>
+                </section>
+
+                <section id="aboutme" data-markdown>
+					<script type="text/template">
+                        ## About Raphael
+                        <br />
+                        * B. Eng Civil <t><t> _McGill 2012_
+                        * M.S. Transportation & M. City Planning <t> _MIT 2015_
+                        * Master's Thesis: _Analyzing Transit Equity Using Automatically Collected Data_
+                        * Research Analyst [Toronto Big Data Innovation Team](https://www.toronto.ca/services-payments/streets-parking-transportation/road-safety/big-data-innovation-team/)
+                    </script>
+                </section>
+
+                
+                <section id="outline" data-markdown>
+					<script type="text/template">
+                        ## Outline  
+                        <br />
+                        * [ODX](#odx)
+                        * [History of Transit Equity Analysis in USA](#equity)
+                        * [FTA Reporting Requirements](#fta_analysis)
+                        * [Analyzing Inferred Journeys](#analysis)
+                    </script>
+                </section>
+                
+                <section id="odx">
+                    <section data-markdown>
+                        <script type="text/template">
+                        ## Origin Destination Xfer Inference (ODX)
+                        </script>
+                    </section>    
+
+                    <section data-markdown>
+                        <script type="text/template">
+                        ### Automatically Collected Data Systems
+                        <br />
+                        <small><ul>
+                        <li>Transit agencies are overwhelmed by data collected from turnkey systems. And they have minimal analytical capacity to transform it into useful information</li>
+                        <li>Moreover, data is stored in individual departments, with minimal motivation to break down silos and combine disparate datastreams</li>
+                        <li>But there is a glimmer of hope, inspired by "business analytics" and "Big Data" movements, data "warehouses" are appearing on the horizon</li>
+                        </ul></small></div>
+                        </script>
+                    </section>            
+                    
+                    <section data-markdown>
+                        <script type="text/template">
+                        ### ODX
+                        <br />
+                        - Originally developed by Jay Gordon for our research partners Transport for London
+                        - Inferred origins and destinations on bus network
+                        - Using heuristics linked bus and rail stages into journeys
+                        </script>
+                    </section>      
+                    
+                    <section data-markdown>
+                        <script type="text/template">
+                        ### Origin & Destination Inference
+                        ![](img/20171020/destination_inference.png)
+                        </script>
+                    </section>           
+                    
+                    <section data-markdown>
+                        <script type="text/template">
+                        ### Journey Inference
+                        <br />
+                        <br />
+                        A bunch of if-then heuristics to combine individual trip segments into a journey
+                        
+                        </script>
+                    </section>           
+                    
+                    <section data-markdown>
+                        <script type="text/template">
+                        ### Applications of OD Inference
+                        <br />
+                        - Better OD data
+                          * Greater N
+                          * Temporal scale
+                            - Multiple days
+                            - Second resolution
+                          * No omissions
+                        - Travel time included
+                          * Customer-oriented performance metric
+                        </script>
+                    </section>           
+                    
+                    <section data-markdown>
+                        <script type="text/template">
+                        ### Application (ctd)
+                        <br />
+                        <br /> 
+                        - Vehicle load profiles: crowding along a route
+                        - Demand modelling & policy forecasting 
+                        - Behaviour modelling for special events
+                        
+                        </script>
+                    </section>           
+                
+                </section>
+
+                <section id="equity">
+                    <section data-markdown>
+                        <script type="text/template">
+                        ## History of Transit Equity Analysis in USA
+                        </script>
+                    </section>
+                    
+                    <section data-markdown>
+                        <script type="text/template">
+                        ### 1964 Title VI of the Civil Rights Act
+                         
+                         - The end of separate but equal
+                         - Prohibits programs and agencies receiving federal funding from discriminating based on race, color, or national origin.
+                         - Doesn't stop the highway bulldozer
+                        </script>
+                    </section>
+                    
+                    <section data-markdown>
+                        <script type="text/template">
+                        ### Build baby build
+                        
+                         - Highways were frequently built through minority neighborhoods
+                         - The largely transit-dependent populations received little benefit while burdened with noise and pollution
+                        </script>
+                    </section>
+                    
+                    <section data-markdown>
+                        <script type="text/template">
+                        ### 1970 USDOT Regulation
+                         
+                         - First appearance of an effects-based equity approach
+                         - Discriminatory intent doesn't need to be proven
+                         - Requires agencies to document extent to which minorities benefit from programs
+                        </script>
+                    </section>
+                    
+                    <section data-markdown>
+                        <script type="text/template">
+                        ### 1972 Urban Mass Transit Administration
+                        
+                         - Disparate outcomes could be basis for withholding funding
+                         - And yet....
+                        </script>
+                    </section>
+                    
+                    <section data-markdown>
+                        <script type="text/template">
+                        ### 1972-1982 (Pucher)
+                        
+                         - Transit capital & operating subsidies distributed disproportionately to commuter rail and subways 
+                         - Modes primarily used by higher income white commuters
+                        </script>
+                    </section>
+                    
+                    <section data-markdown>
+                        <script type="text/template">
+                        ### 1988 UMTA Update
+                        
+                         - Specific requirements on geographic analysis
+                         - Find service-area minority proportion
+                         - Divide service-area into minority and non-minority areas
+                         - Compare agency service standard compliance 
+                        </script>
+                    </section>
+                    
+                    <section data-markdown>
+                        <script type="text/template">
+                        ### ISTEA 1991
+                        
+                         - Expands role of the Metropolitan Planning Organization
+                         - Also puts MPOs under the purview of Title VI
+                         - Regional transportation plans should not discriminate against protected populations
+                        </script>
+                    </section>
+                    
+                    <section data-markdown>
+                        <script type="text/template">
+                        ### The Environmental Justice (EJ) Movement
+                         
+                         - 80s-90s, Federal agencies were applying laws in a disparate manner depending on the income and the race of affected communities
+                         - hazardous waste facilities were being disproportionately sited in minority communities
+                         - EPA was found to regulate Superfund sites more strictly in predominantly White areas
+                        </script>
+                    </section>
+                    
+                    <section data-markdown>
+                        <script type="text/template">
+                        ### Clinton's 1994 EJ Executive Order
+                         
+                         - Directs agencies to consider low-income a protected class 
+                         - USDOT Regulation in 1997 
+                            * Social and economic effects are added as outcomes to identify along with human-health and environmental effects
+                        </script>
+                    </section>
+                    
+                    <section data-markdown>
+                        <script type="text/template">
+                        ### Spatial Mismatch Hypothesis (Kain, 1968)
+                         
+                         - Inner-city, primarily Black and low-skilled workers, had been cut off from employment opportunities which had migrated to the suburbs
+                         - Automobile mismatch in low-income households (Taylor & Ong, 1995)
+                         - Transportation planning 1998-2000s still hasn't improved access to low-skilled jobs (Gobillon et al. 2007)
+                        </script>
+                    </section>
+                    
+                    <section data-markdown>
+                        <script type="text/template">
+                        ### 2001 Alexander v Sandoval
+                         
+                         - Latina woman sues Alabama DMV for not providing driving tests in Spanish
+                         - Ruling limits the means of redress of disparate impacts proscribed under Title VI to administrative action only 
+                         - Title VI right to legal recourse only in cases of demonstrated discriminatory intent
+                        </script>
+                    </section>
+                    
+                    <section data-markdown>
+                        <script type="text/template">
+                        ### 2011 Ninth Circuit Court of Appeals
+                         
+                         - Upholds discriminatory intent in case against Bay Area MTC for disparately subsidizing rail trips over bus ones 
+                         - Federal regulation still requires agencies to assess, report, and remedy disparate outcomes
+                         - However the right for advocates to pursue legal remedy for these outcomes has been removed
+                        </script>
+                    </section>
+                </section>
+
+                <section id="fta_analysis">
+                    <section data-markdown>
+                        <script type="text/template">
+                        ### FTA Required Analysis  
+                        <br/>
+                        <br/>
+                        Agencies operating 50+ fixed-route vehicles serving over 200,000 pop
+                        </script>
+                    </section>
+                        
+
+
+                    <section data-markdown>
+                        <script type="text/template">
+                        |Analysis Required|Frequency|
+                        |----------------------------|
+                        |Disparate impacts & disproportionate burden|Fare increase or major service change |
+                        |Transit service monitoring|Every three years |
+                        |Demographic and service profile maps and charts|Every three years |
+                        |Survey data regarding customer demographic and travel patterns|Every five years|
+                        </script>
+                    </section>
+                    
+                    <section data-markdown>
+                        <script type="text/template">
+                        ### Transit service monitoring  
+                        
+                         1. Determine Area Threshold
+                         2. Label Routes and Stations Minority
+                         3. Calculate Performance Metrics:
+                            - Vehicle load
+                            - Scheduled headway
+                            - On-time performance (schedule adherence, or punctuality)
+                            - Service availability (density of coverage)
+                         4. Compare Ratio of Routes Passing Metrics by minority/non-minority status (80%)
+                        </script>
+                    </section>
+                    
+                    <section data-markdown>
+                        <script type="text/template">
+                        ### Critiques  
+                        <ul><small>
+                        <li>Passenger should be unit of analysis </li>
+                        <li>Use of average proportions hides distributions (Bills, 2013)</li></small></ul>
+                        <div style="margin:0px;">
+                        <img style="margin:0px;" src="img/20171020/avgs_hide.png"></img>
+                        <img style="margin:0px;" src="img/20171020/distro_better.png"></img>
+                        </div>`
+                        </script>
+                    </section>
+                            
+                    <section data-markdown>
+                        <script type="text/template">
+                        ### Critiques    
+                         - Metrics don’t necessarily reflect the passenger experience
+                         - Neighbourhood effects assumes homogeneity of population within geographic unit of analysis  (Karner & Niemeier, 2013)
+                         - Changing FTA-approved data source can result in opposite conclusion (Karner & Golub, 2015)
+                                
+                        </script>
+                    </section>
+            
+                    <section data-markdown>
+                        <script type="text/template">
+                        ## Can we do better?
+                        </br>
+                        </br>
+                        </br>
+                        ## YES!
+                         
+                        </script>
+                    </section>
+                </section>
+                                
+                <section id="motivation">
+                    <section data-markdown>
+                        <script type="text/template">
+                        ## Motivation for Analyzing Inferred Journeys
+                        </script>
+                    </section>
+                    
+                    <section data-markdown>
+                        <script type="text/template">
+                        [![](img/20171020/globe_black_longer_commute.png)](http://archive.boston.com/news/local/massachusetts/2012/11/24/wide-racial-gap-exists-speed-boston-area-commutes/oW7hHJ0IFWluX6eQI15QPL/story.html)
+                        </script>
+                    </section>
+                    
+                    <section data-markdown>
+                        <script type="text/template">
+                        ### Black commuters face longer trips to work  
+                        
+                        <blockquote><small>Black subway commuters spend an **additional 28 hours annually** getting to work as compared to white subway commuters. The worst differential is experienced by black bus commuters, who spend **nearly 70 more hours** per year than their white counterparts getting to and from work by bus.
+                        Measuring Transportation Equity: Commute Time Penalties by Race and Mode in Greater Boston</small>
+                        [*Williams, Pollack, & Billingham*](https://trid.trb.org/view/1289630)</blockquote>
+                        </script>
+                    </section>
+                    
+                    <section data-markdown>
+                        <script type="text/template">
+                        ### However...  
+                        <br/>
+                         - Study data source is American Community Survey (ACS), a 1% annual sample supplement to the decennial census
+                         - Limited detail of transit trip
+                         - Self-reported travel time
+                        </script>
+                    </section>
+                    
+                    <section data-markdown>
+                        <script type="text/template">
+                        #### Individual Responses Anonymized to PUMAs (>100,000 inhabitants)
+                        
+                        <img height="540" width="417" src="img/20171020/image12.png"></img>
+                        </script>
+                    </section>
+                    
+                    <section data-markdown>
+                        <script type="text/template">
+                        PUMAs large geographic resolution makes it very difficult to determine transit and trip characteristics causing these travel time differences
+                        </script>
+                    </section>
+                </section>
+
+                <section id="analysis">
+                    <section data-markdown>
+                        <script type="text/template">
+                        ### Application of ODX results to Equity Analysis
+                        
+                         - One month of inferred weekday OD data
+                         - 18.3M fares, 1.55M distinct fare cards
+                         - Regular commuters took 4.23M morning commute trips
+                         - Of which 1.96M were from their home location with OD inferred
+                        </script>
+                    </section>
+                    
+                    <section data-markdown>
+                        <script type="text/template">
+                        #### Clustered Origins to Determine Home Region
+                        
+                        <img src="img/20171020/clustered_origins.png" width="90%"></img>
+
+                        </script>
+                    </section>
+                    
+                    <section data-markdown>
+                        <script type="text/template">
+                        #### Intersected Stop Catchment Areas with Census Tracts
+                        <ul><small><li>Used Voronoi Polygons of stops created for each network </li>
+                        <li>Then assign originating trips within "home zone" to the intersected tracts</li>
+                        </small></ul>
+
+                        ![](img/20171020/image3.png)
+
+                        </script>
+                    </section>
+
+                    <section data-markdown>
+                        <script type="text/template">
+                        ### Boston's Demographic Landscape
+
+                        <img src="img/20171020/distribution_commuters.png" height="540" width="804"></img>
+
+                        </script>
+                    </section>
+
+                    <section data-markdown>
+                        <script type="text/template">
+                        #### Avg. Journey Time Sensitivity to Threshold
+                        <img src="img/20171020/image34.png" height="540" width="662"></img>
+                        </script>
+                    </section>
+                    
+                    <section data-markdown>
+                        <script type="text/template">
+                        #### While Trip Distance Doesn't Vary
+                        <img src="img/20171020/image35.png" height="540" width="888"></img>
+                        </script>
+                    </section>
+                    
+                    <section data-markdown>
+                        <script type="text/template">
+                        #### But Speeds Decrease
+                        <img src="img/20171020/image33.png" height="540" width="669"></img>
+                        </script>
+                    </section>
+                    
+                    <section data-markdown>
+                        <script type="text/template">
+                        #### Partially Due to Trips Requiring More Transfers
+                        <img src="img/20171020/image36.png" height="540" width="878"></img>
+                        </script>
+                    </section>
+                    
+                    <section data-markdown>
+                        <script type="text/template">
+                        #### Tracts Selected Based on Determined Threshold
+                        <img src="img/20171020/image37.png" height="540" width="699"></img>
+                        </script>
+                    </section>
+
+                    <section data-markdown>
+                        <script type="text/template">
+                        #### Tracts Selected Based on Determined Threshold
+                        ![](img/20171020/table_avg_jny_time.png)
+                        </script>
+                    </section>
+
+                    <section data-markdown>
+                        <script type="text/template">
+                        <img src="img/20171020/image41.png" height="540" width="878"></img>
+                        </script>
+                    </section>
+                    
+                    <section data-markdown>
+                        <script type="text/template">
+                        <img src="img/20171020/image44.png" height="540" width="878"></img>
+                        </script>
+                    </section>
+                    
+                    <section data-markdown>
+                        <script type="text/template">
+                            ### Examined Potential Solutions
+
+                             - Through-running buses at key transfer points
+                             - Improve departure regularity to reduce wait times at major terminals
+                        </script>
+                    </section>
+
+                    <section data-markdown>
+                        <script type="text/template">
+                            ##### Best Solution: Upgrading Commuter Rail to Subway Frequency
+                            ![](img/20171020/fairmount.png)
+                        </script>
+                    </section>
+                    
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## Conclusions:
+
+                             - State of the practice for Title VI & EJ Analyses hasn't kept up with existing data collection
+                             - Transit agencies can derive passenger-centric performance metrics from inferred trips. These metrics 
+                            should be used in equity analyses. 
+                             - Inferred OD can be supplemented with survey data linking farecards (and this would help validate OD inference)
+                        </script>
+                    </section>
+
+                </section>
+
+                <section id="coda">
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## 2 Years Later:
+
+                            - [Boston's methodical bus revamp](https://www.citylab.com/transportation/2017/04/inside-bostons-bus-revamp/522726/)
+                            ![](img/20171020/vanderwaart_quote.png) 
+
+
+                        </script>
+                    </section>
+
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## 2 Years Later:
+
+                            Transit Lab Theses:
+                            - [Vanderwaart - Planning transit networks with origin, destination, and interchange inference](https://dspace.mit.edu/handle/1721.1/103820)
+                            - [Southwick - Understanding bus passenger crowding through origin destination inference](https://dspace.mit.edu/handle/1721.1/104323)
+                        </script>
+                    </section>
+
+                    <section data-markdown>
+                        <script type="text/template">
+                            ## 2 Years Later:
+
+                            Terrible metrics still being used:
+                            >More than 40 percent of the MBTA’s bus routes in largely minority communities run a below-average number of buses — compared to just 25 percent on so-called “non-minority” routes [...]
+                            [source](http://www.bostonherald.com/news/local_coverage/2017/09/study_mbta_service_for_minority_bus_routes_subpar)
+                        </script>
+                    </section>
+            
+                    <section data-markdown>
+                        <script type="text/template">
+                            <br />
+                            <br />
+                            # ?
+                        </script>
+                    </section>
+
+                </section>
+                
+            </div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: false,
+                slideNumber: true,
+                previewLinks: true,
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+            Reveal.addEventListener( 'centerText', function() {
+                Reveal.configure({center: true});
+            }, false ); 
+		</script>
+
+	</body>
+</html>
