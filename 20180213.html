@@ -133,6 +133,13 @@
                     
                     <section data-markdown>
                         <script type="text/template">
+                        ### Origin Inference
+                        ![](img/20180213/origin_inference.png)
+                        </script>
+                    </section>   
+                    
+                    <section data-markdown>
+                        <script type="text/template">
                         ### Origin & Destination Inference
                         ![](img/20171020/destination_inference.png)
                         </script>
@@ -146,7 +153,81 @@
                         A bunch of if-then heuristics to combine individual trip segments into a journey
                         
                         </script>
-                    </section>           
+                    </section> 
+                    
+                    
+                    <section data-markdown>
+                        <script type="text/template">
+                        ### Data Sources
+                        <br />
+                         - Automated Fare Collection
+                           * Fare id, fare type, transaction type, fare box, timestamp
+                         - Track Circuit Data
+                           * Red Line and Orange Line
+                           * Blue Line
+                           * At time of research, Green Line LRT had unreliable AVI system
+                         - Bus event logger data
+                           * Geo-processed "external announcements"
+                        
+                        </script>
+                    </section> 
+                    
+                    <section>
+                        <table style="font-size: smaller;">
+                          <thead>
+                            <tr>
+                              <th>&nbsp;</th>
+                              <th>Bus</th>
+                              <th title='Branch level origin and destination inference'>Surface LRT</th>
+                              <th>Heavy Rail</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>Origin Inference</td>
+                              <td>97.1%</td>
+                              <td>100%</td>
+                              <td>100%</td>
+                            </tr>
+                            <tr>
+                              <td>Destination Inference</td>
+                              <td>56.4%</td>
+                              <td>77.0%</td>
+                              <td>74.8%</td>
+                            </tr>
+                            <tr>
+                              <td>Only One Stage In a Day</td>
+                              <td>8.72%</td>
+                              <td>16.7%</td>
+                              <td>14.9%</td>
+                            </tr>
+                            <tr>
+                              <td>Distance Greater than 1000m</td>
+                              <td>8.80%</td>
+                              <td>2.10%</td>
+                              <td>3.70%</td>
+                            </tr>
+                            <tr>
+                              <td>Target Destination same as Current Origin</td>
+                              <td>7.23%</td>
+                              <td>0%</td>
+                              <td>4.69%</td>
+                            </tr>
+                            <tr>
+                              <td>Cash</td>
+                              <td>5.21%</td>
+                              <td>3.50%</td>
+                              <td>0%</td>
+                            </tr>
+                            <tr>
+                              <td>User Travelling Away from Target Destination</td>
+                              <td>4.77%</td>
+                              <td>0.%</td>
+                              <td>0%</td>
+                            </tr>
+                          </tbody>
+                            </table> 
+                    </section> 
                     
                     <section data-markdown>
                         <script type="text/template">
@@ -175,6 +256,8 @@
                         </script>
                     </section>           
                 
+                    
+                    
                 </section>
 
                 <section id="equity">
